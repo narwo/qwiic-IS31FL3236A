@@ -1,0 +1,713 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 8268 5846
+encoding utf-8
+Sheet 1 1
+Title "MCP23017 Breakout"
+Date "2020-06-15"
+Rev "v1.0"
+Comp "2020 (C) Mark Olsson"
+Comment1 "mark@markolsson.se"
+Comment2 "https://github.com/narwo"
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1575 2200 1575 2150
+Wire Wire Line
+	1025 2200 1575 2200
+Text Label 1075 2100 0    50   ~ 0
+SDA
+Wire Wire Line
+	1075 2350 1075 2300
+Wire Wire Line
+	1025 2100 1075 2100
+Wire Wire Line
+	1025 2000 1075 2000
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5EF7B859
+P 825 2200
+F 0 "J2" H 800 1900 50  0000 L CNN
+F 1 "Qwiic" H 725 2400 50  0000 L CNN
+F 2 "01_Connectors:JST_SH_1x04_H" H 825 2200 50  0001 L BNN
+F 3 "" H 825 2200 50  0001 C CNN
+	1    825  2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1075 2300 1025 2300
+Text Label 1075 2000 0    50   ~ 0
+SCL
+$Comp
+L power:GND #PWR?
+U 1 1 5EF7B865
+P 1075 2350
+AR Path="/5E929DEB/5EF7B865" Ref="#PWR?"  Part="1" 
+AR Path="/5EF7B865" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 1075 2100 50  0001 C CNN
+F 1 "GND" H 1080 2177 50  0000 C CNN
+F 2 "" H 1075 2350 50  0001 C CNN
+F 3 "" H 1075 2350 50  0001 C CNN
+	1    1075 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5EF6E5C7
+P 7400 6300
+F 0 "H1" H 7500 6346 50  0000 L CNN
+F 1 "MountingHole" H 7500 6255 50  0000 L CNN
+F 2 "01_Connectors:MountingHole_M2.5" H 7400 6300 50  0001 C CNN
+F 3 "~" H 7400 6300 50  0001 C CNN
+	1    7400 6300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	800  900  800  950 
+Wire Wire Line
+	800  1425 800  1400
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC1C08C
+P 800 900
+AR Path="/5E929DEB/5EC1C08C" Ref="#PWR?"  Part="1" 
+AR Path="/5EC1C08C" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 800 750 50  0001 C CNN
+F 1 "+3.3V" H 815 1073 50  0000 C CNN
+F 2 "" H 800 900 50  0001 C CNN
+F 3 "" H 800 900 50  0001 C CNN
+	1    800  900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small_ALT D1
+U 1 1 5EC1C087
+P 800 1300
+F 0 "D1" V 875 1400 39  0000 R CNN
+F 1 "GREEN" V 725 1275 39  0000 R CNN
+F 2 "01_Passives:LED_0603" V 800 1300 50  0001 C CNN
+F 3 "~" V 800 1300 50  0001 C CNN
+	1    800  1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2D490E
+P 800 1425
+AR Path="/5E929DEB/5F2D490E" Ref="#PWR?"  Part="1" 
+AR Path="/5F2D490E" Ref="#PWR02"  Part="1" 
+F 0 "#PWR02" H 800 1175 50  0001 C CNN
+F 1 "GND" H 805 1252 50  0000 C CNN
+F 2 "" H 800 1425 50  0001 C CNN
+F 3 "" H 800 1425 50  0001 C CNN
+	1    800  1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EEA706C
+P 1575 2150
+AR Path="/5E929DEB/5EEA706C" Ref="#PWR?"  Part="1" 
+AR Path="/5EEA706C" Ref="#PWR010"  Part="1" 
+F 0 "#PWR010" H 1575 2000 50  0001 C CNN
+F 1 "+3.3V" H 1590 2323 50  0000 C CNN
+F 2 "" H 1575 2150 50  0001 C CNN
+F 3 "" H 1575 2150 50  0001 C CNN
+	1    1575 2150
+	1    0    0    -1  
+$EndComp
+Text Label 4450 4600 3    50   ~ 0
+SCL
+Text Label 4650 4600 3    50   ~ 0
+SDA
+$Comp
+L power:+3.3V #PWR06
+U 1 1 5E9ADE2F
+P 2250 3775
+F 0 "#PWR06" H 2250 3625 50  0001 C CNN
+F 1 "+3.3V" H 2265 3948 50  0000 C CNN
+F 2 "" H 2250 3775 50  0001 C CNN
+F 3 "" H 2250 3775 50  0001 C CNN
+	1    2250 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5ECAE4BC
+P 1800 3775
+F 0 "#PWR05" H 1800 3525 50  0001 C CNN
+F 1 "GND" H 1805 3602 50  0000 C CNN
+F 2 "" H 1800 3775 50  0001 C CNN
+F 3 "" H 1800 3775 50  0001 C CNN
+	1    1800 3775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5E9AF11D
+P 2000 3775
+F 0 "C1" V 2229 3775 50  0000 C CNN
+F 1 "100nF" V 2138 3775 50  0000 C CNN
+F 2 "01_Passives:C_0603" H 2000 3775 50  0001 C CNN
+F 3 "~" H 2000 3775 50  0001 C CNN
+	1    2000 3775
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	1800 3775 1900 3775
+Wire Wire Line
+	2100 3775 2250 3775
+Connection ~ 2250 3775
+Wire Wire Line
+	800  1150 800  1200
+Wire Wire Line
+	4650 4550 4650 4600
+Wire Wire Line
+	4450 4550 4450 4600
+$Comp
+L Device:R_Small R1
+U 1 1 5EEA647C
+P 800 1050
+F 0 "R1" H 859 1096 50  0000 L CNN
+F 1 "10k" H 859 1005 50  0000 L CNN
+F 2 "01_Passives:R_0603" H 800 1050 50  0001 C CNN
+F 3 "~" H 800 1050 50  0001 C CNN
+	1    800  1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 925  1625 975 
+Wire Wire Line
+	1625 1175 1625 1400
+Wire Wire Line
+	1300 1175 1300 1400
+Wire Wire Line
+	1300 925  1300 975 
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EF00F36
+P 1625 925
+AR Path="/5E929DEB/5EF00F36" Ref="#PWR?"  Part="1" 
+AR Path="/5EF00F36" Ref="#PWR04"  Part="1" 
+F 0 "#PWR04" H 1625 775 50  0001 C CNN
+F 1 "+3.3V" H 1640 1098 50  0000 C CNN
+F 2 "" H 1625 925 50  0001 C CNN
+F 3 "" H 1625 925 50  0001 C CNN
+	1    1625 925 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EF002CA
+P 1300 925
+AR Path="/5E929DEB/5EF002CA" Ref="#PWR?"  Part="1" 
+AR Path="/5EF002CA" Ref="#PWR03"  Part="1" 
+F 0 "#PWR03" H 1300 775 50  0001 C CNN
+F 1 "+3.3V" H 1315 1098 50  0000 C CNN
+F 2 "" H 1300 925 50  0001 C CNN
+F 3 "" H 1300 925 50  0001 C CNN
+	1    1300 925 
+	1    0    0    -1  
+$EndComp
+Text Label 1625 1400 2    50   ~ 0
+SCL
+Text Label 1300 1400 2    50   ~ 0
+SDA
+Wire Wire Line
+	2250 3850 2250 3775
+$Comp
+L power:GND #PWR011
+U 1 1 5F314034
+P 6900 3950
+F 0 "#PWR011" H 6900 3700 50  0001 C CNN
+F 1 "GND" H 6905 3777 50  0000 C CNN
+F 2 "" H 6900 3950 50  0001 C CNN
+F 3 "" H 6900 3950 50  0001 C CNN
+	1    6900 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3950 6900 3900
+Wire Wire Line
+	6900 3800 6850 3800
+Wire Wire Line
+	6850 3900 6900 3900
+Connection ~ 6900 3900
+Wire Wire Line
+	6900 3900 6900 3800
+$Comp
+L 01_ICs:IS31FL3236A U1
+U 1 1 5F3001DA
+P 4450 3850
+F 0 "U1" V 5000 5750 50  0000 L CNN
+F 1 "IS31FL3236A" V 4000 1675 50  0000 L CNN
+F 2 "01_Packages:QFN_40_5x5_0.8_Thermal" H 2175 2150 50  0001 L BNN
+F 3 "" H 4450 3850 50  0001 L BNN
+	1    4450 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5F3E9BB6
+P 4350 4875
+F 0 "R3" H 4409 4921 50  0000 L CNN
+F 1 "100k" H 4409 4830 50  0000 L CNN
+F 2 "01_Passives:R_0603" H 4350 4875 50  0001 C CNN
+F 3 "~" H 4350 4875 50  0001 C CNN
+	1    4350 4875
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5F3EB282
+P 4250 4875
+F 0 "R2" H 4309 4921 50  0000 L CNN
+F 1 "3.3k" H 4309 4830 50  0000 L CNN
+F 2 "01_Passives:R_0603" H 4250 4875 50  0001 C CNN
+F 3 "~" H 4250 4875 50  0001 C CNN
+	1    4250 4875
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 4550 4250 4775
+Wire Wire Line
+	4350 4775 4350 4550
+Wire Wire Line
+	4350 4975 4350 5025
+$Comp
+L power:GND #PWR012
+U 1 1 5F423C49
+P 4250 5025
+F 0 "#PWR012" H 4250 4775 50  0001 C CNN
+F 1 "GND" H 4255 4852 50  0000 C CNN
+F 2 "" H 4250 5025 50  0001 C CNN
+F 3 "" H 4250 5025 50  0001 C CNN
+	1    4250 5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4975 4250 5025
+$Comp
+L 00_Components:LED_RBAG D7
+U 1 1 5EE54212
+P 3600 1175
+F 0 "D7" H 3675 1550 50  0000 C CNN
+F 1 "RBAG" H 3475 825 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 3600 1125 50  0001 C CNN
+F 3 "~" H 3600 1125 50  0001 C CNN
+	1    3600 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D2
+U 1 1 5F488F93
+P 4225 1175
+F 0 "D2" H 4300 1550 50  0000 C CNN
+F 1 "RBAG" H 4100 825 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 4225 1125 50  0001 C CNN
+F 3 "~" H 4225 1125 50  0001 C CNN
+	1    4225 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D3
+U 1 1 5F48A4E4
+P 4850 1175
+F 0 "D3" H 4925 1550 50  0000 C CNN
+F 1 "RBAG" H 4725 825 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 4850 1125 50  0001 C CNN
+F 3 "~" H 4850 1125 50  0001 C CNN
+	1    4850 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D4
+U 1 1 5F490899
+P 5475 1175
+F 0 "D4" H 5550 1550 50  0000 C CNN
+F 1 "RBAG" H 5350 825 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 5475 1125 50  0001 C CNN
+F 3 "~" H 5475 1125 50  0001 C CNN
+	1    5475 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D5
+U 1 1 5F4908A3
+P 6100 1175
+F 0 "D5" H 6175 1550 50  0000 C CNN
+F 1 "RBAG" H 5975 825 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 6100 1125 50  0001 C CNN
+F 3 "~" H 6100 1125 50  0001 C CNN
+	1    6100 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D8
+U 1 1 5F4AB535
+P 3600 2075
+F 0 "D8" H 3675 2450 50  0000 C CNN
+F 1 "RBAG" H 3475 1725 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 3600 2025 50  0001 C CNN
+F 3 "~" H 3600 2025 50  0001 C CNN
+	1    3600 2075
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D9
+U 1 1 5F4AB53F
+P 4225 2075
+F 0 "D9" H 4300 2450 50  0000 C CNN
+F 1 "RBAG" H 4100 1725 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 4225 2025 50  0001 C CNN
+F 3 "~" H 4225 2025 50  0001 C CNN
+	1    4225 2075
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D10
+U 1 1 5F4AB549
+P 4850 2075
+F 0 "D10" H 4925 2450 50  0000 C CNN
+F 1 "RBAG" H 4725 1725 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 4850 2025 50  0001 C CNN
+F 3 "~" H 4850 2025 50  0001 C CNN
+	1    4850 2075
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D11
+U 1 1 5F4AB553
+P 5475 2075
+F 0 "D11" H 5550 2450 50  0000 C CNN
+F 1 "RBAG" H 5350 1725 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 5475 2025 50  0001 C CNN
+F 3 "~" H 5475 2025 50  0001 C CNN
+	1    5475 2075
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D12
+U 1 1 5F4AB55D
+P 6100 2075
+F 0 "D12" H 6175 2450 50  0000 C CNN
+F 1 "RBAG" H 5975 1725 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 6100 2025 50  0001 C CNN
+F 3 "~" H 6100 2025 50  0001 C CNN
+	1    6100 2075
+	0    1    -1   0   
+$EndComp
+$Comp
+L 00_Components:LED_RBAG D13
+U 1 1 5F4AB567
+P 6725 2075
+F 0 "D13" H 6800 2450 50  0000 C CNN
+F 1 "RBAG" H 6600 1725 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 6725 2025 50  0001 C CNN
+F 3 "~" H 6725 2025 50  0001 C CNN
+	1    6725 2075
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F4BD555
+P 5175 875
+AR Path="/5E929DEB/5F4BD555" Ref="#PWR?"  Part="1" 
+AR Path="/5F4BD555" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 5175 725 50  0001 C CNN
+F 1 "+3.3V" H 5190 1048 50  0000 C CNN
+F 2 "" H 5175 875 50  0001 C CNN
+F 3 "" H 5175 875 50  0001 C CNN
+	1    5175 875 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6725 975  6725 925 
+Wire Wire Line
+	3600 1825 3600 1875
+Wire Wire Line
+	3600 975  3600 925 
+Wire Wire Line
+	3600 925  4225 925 
+Wire Wire Line
+	4225 925  4225 975 
+Wire Wire Line
+	4225 925  4850 925 
+Wire Wire Line
+	4850 925  4850 975 
+Connection ~ 4225 925 
+Wire Wire Line
+	4850 925  5175 925 
+Wire Wire Line
+	5475 925  5475 975 
+Connection ~ 4850 925 
+Wire Wire Line
+	5475 925  6100 925 
+Wire Wire Line
+	6100 925  6100 975 
+Connection ~ 5475 925 
+Connection ~ 6100 925 
+Wire Wire Line
+	3600 1825 4225 1825
+Wire Wire Line
+	4225 1825 4225 1875
+Wire Wire Line
+	4225 1825 4850 1825
+Wire Wire Line
+	4850 1825 4850 1875
+Connection ~ 4225 1825
+Wire Wire Line
+	4850 1825 5175 1825
+Wire Wire Line
+	5475 1825 5475 1875
+Connection ~ 4850 1825
+Wire Wire Line
+	5475 1825 6100 1825
+Wire Wire Line
+	6100 1825 6100 1875
+Connection ~ 5475 1825
+Wire Wire Line
+	6100 1825 6725 1825
+Wire Wire Line
+	6725 1825 6725 1875
+Connection ~ 6100 1825
+$Comp
+L power:GND #PWR015
+U 1 1 5F569854
+P 4750 4600
+F 0 "#PWR015" H 4750 4350 50  0001 C CNN
+F 1 "GND" H 4755 4427 50  0000 C CNN
+F 2 "" H 4750 4600 50  0001 C CNN
+F 3 "" H 4750 4600 50  0001 C CNN
+	1    4750 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4550 4750 4600
+$Comp
+L Device:R_Small R4
+U 1 1 5F590662
+P 1300 1075
+F 0 "R4" H 1359 1121 50  0000 L CNN
+F 1 "10k" H 1359 1030 50  0000 L CNN
+F 2 "01_Passives:R_0603" H 1300 1075 50  0001 C CNN
+F 3 "~" H 1300 1075 50  0001 C CNN
+	1    1300 1075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5F590DA0
+P 1625 1075
+F 0 "R5" H 1684 1121 50  0000 L CNN
+F 1 "10k" H 1684 1030 50  0000 L CNN
+F 2 "01_Passives:R_0603" H 1625 1075 50  0001 C CNN
+F 3 "~" H 1625 1075 50  0001 C CNN
+	1    1625 1075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F2F0A46
+P 8175 6275
+F 0 "H3" H 8275 6321 50  0000 L CNN
+F 1 "MountingHole" H 8275 6230 50  0000 L CNN
+F 2 "01_Connectors:MountingHole_M2.5" H 8175 6275 50  0001 C CNN
+F 3 "~" H 8175 6275 50  0001 C CNN
+	1    8175 6275
+	-1   0    0    -1  
+$EndComp
+Text Label 2750 3150 1    50   ~ 0
+P01
+Text Label 2850 3150 1    50   ~ 0
+P02
+Text Label 2950 3150 1    50   ~ 0
+P03
+Text Label 3050 3150 1    50   ~ 0
+P04
+Text Label 3150 3150 1    50   ~ 0
+P05
+Text Label 3250 3150 1    50   ~ 0
+P06
+Text Label 3350 3150 1    50   ~ 0
+P07
+Text Label 3450 3150 1    50   ~ 0
+P08
+Text Label 3550 3150 1    50   ~ 0
+P09
+Text Label 3650 3150 1    50   ~ 0
+P10
+Text Label 3750 3150 1    50   ~ 0
+P11
+Text Label 3850 3150 1    50   ~ 0
+P12
+Text Label 3950 3150 1    50   ~ 0
+P13
+Text Label 4050 3150 1    50   ~ 0
+P14
+Text Label 4150 3150 1    50   ~ 0
+P15
+Text Label 4250 3150 1    50   ~ 0
+P16
+Text Label 4350 3150 1    50   ~ 0
+P17
+Text Label 4450 3150 1    50   ~ 0
+P18
+Text Label 4550 3150 1    50   ~ 0
+P19
+Text Label 4650 3150 1    50   ~ 0
+P20
+Text Label 4750 3150 1    50   ~ 0
+P21
+Text Label 4850 3150 1    50   ~ 0
+P22
+Text Label 4950 3150 1    50   ~ 0
+P23
+Text Label 5050 3150 1    50   ~ 0
+P24
+Text Label 5150 3150 1    50   ~ 0
+P25
+Text Label 5250 3150 1    50   ~ 0
+P26
+Text Label 5350 3150 1    50   ~ 0
+P27
+Text Label 5450 3150 1    50   ~ 0
+P28
+Text Label 5550 3150 1    50   ~ 0
+P29
+Text Label 5650 3150 1    50   ~ 0
+P30
+Text Label 5750 3150 1    50   ~ 0
+P31
+Text Label 5850 3150 1    50   ~ 0
+P32
+Text Label 5950 3150 1    50   ~ 0
+P33
+Text Label 6050 3150 1    50   ~ 0
+P34
+Text Label 6150 3150 1    50   ~ 0
+P35
+Text Label 6250 3150 1    50   ~ 0
+P36
+Text Label 3800 1375 3    50   ~ 0
+P01
+Text Label 3600 1375 3    50   ~ 0
+P02
+Text Label 3400 1375 3    50   ~ 0
+P03
+Text Label 4425 1375 3    50   ~ 0
+P04
+Text Label 4225 1375 3    50   ~ 0
+P05
+Text Label 4025 1375 3    50   ~ 0
+P06
+Text Label 5050 1375 3    50   ~ 0
+P07
+Text Label 4850 1375 3    50   ~ 0
+P08
+Text Label 4650 1375 3    50   ~ 0
+P09
+Text Label 5675 1375 3    50   ~ 0
+P10
+Text Label 5475 1375 3    50   ~ 0
+P11
+Text Label 5275 1375 3    50   ~ 0
+P12
+Text Label 6300 1375 3    50   ~ 0
+P13
+Text Label 6100 1375 3    50   ~ 0
+P14
+Text Label 5900 1375 3    50   ~ 0
+P15
+Text Label 6925 1375 3    50   ~ 0
+P16
+Text Label 6725 1375 3    50   ~ 0
+P17
+Text Label 6525 1375 3    50   ~ 0
+P18
+Text Label 3800 2275 3    50   ~ 0
+P19
+Text Label 3600 2275 3    50   ~ 0
+P20
+Text Label 3400 2275 3    50   ~ 0
+P21
+Text Label 4425 2275 3    50   ~ 0
+P22
+Text Label 4225 2275 3    50   ~ 0
+P23
+Text Label 4025 2275 3    50   ~ 0
+P24
+Text Label 5050 2275 3    50   ~ 0
+P25
+Text Label 4850 2275 3    50   ~ 0
+P26
+Text Label 4650 2275 3    50   ~ 0
+P27
+Text Label 5675 2275 3    50   ~ 0
+P28
+Text Label 5475 2275 3    50   ~ 0
+P29
+Text Label 5275 2275 3    50   ~ 0
+P30
+Text Label 6300 2275 3    50   ~ 0
+P31
+Text Label 6100 2275 3    50   ~ 0
+P32
+Text Label 5900 2275 3    50   ~ 0
+P33
+Text Label 6925 2275 3    50   ~ 0
+P34
+Text Label 6725 2275 3    50   ~ 0
+P35
+Text Label 6525 2275 3    50   ~ 0
+P36
+Wire Wire Line
+	5175 875  5175 925 
+Connection ~ 5175 925 
+Wire Wire Line
+	5175 925  5475 925 
+Wire Wire Line
+	6100 925  6725 925 
+$Comp
+L 00_Components:LED_RBAG D6
+U 1 1 5F4908AD
+P 6725 1175
+F 0 "D6" H 6800 1550 50  0000 C CNN
+F 1 "RBAG" H 6600 825 50  0000 C CNN
+F 2 "01_Passives:LED_2020_RGBA" H 6725 1125 50  0001 C CNN
+F 3 "~" H 6725 1125 50  0001 C CNN
+	1    6725 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F3A8052
+P 5175 1775
+AR Path="/5E929DEB/5F3A8052" Ref="#PWR?"  Part="1" 
+AR Path="/5F3A8052" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5175 1625 50  0001 C CNN
+F 1 "+3.3V" H 5190 1948 50  0000 C CNN
+F 2 "" H 5175 1775 50  0001 C CNN
+F 3 "" H 5175 1775 50  0001 C CNN
+	1    5175 1775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5175 1775 5175 1825
+Connection ~ 5175 1825
+Wire Wire Line
+	5175 1825 5475 1825
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F3C2D12
+P 4350 5025
+F 0 "#PWR?" H 4350 4875 50  0001 C CNN
+F 1 "+3.3V" H 4365 5198 50  0000 C CNN
+F 2 "" H 4350 5025 50  0001 C CNN
+F 3 "" H 4350 5025 50  0001 C CNN
+	1    4350 5025
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC
